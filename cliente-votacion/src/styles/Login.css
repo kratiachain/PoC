@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.login {
+    background: #F4F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 0px solid #D7DBDD;
+    box-shadow: .5px .5px 10px #D7DBDD;
+    border-radius: 7px;
+}
+
+.login__titulo > h1 {
+    padding: 20px;
+    align-self: center;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.login__container__form > span {
+    margin-bottom: 2px;
+    color: #99A3A4;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.login__container__form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.login__container__form > input {
+    background-color: #fff  ;
+    min-width: 250px;
+    padding: 5px 0;
+    margin-bottom: 10%;
+    border: 0;
+    border-bottom: 1px solid #b4b8b9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transition: .5s;
+}
+
+.login__container__form > input:focus {
+    outline: none;
+    border-bottom: 1px solid #2ECC71;
+}
+
+.login__container__form > #input_nombre:valid ~ #span_nombre{
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+.login__container__form > #input_dni:valid ~ #span_dni{
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+.login__container__form > #input_contraseña:valid ~ #span_contraseña{
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+/* EFECTO NOMBRE */
+.login__container__form > #input_nombre:focus ~ #span_nombre {
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+#span_nombre {
+    position: relative;
+    top: -48px;
+    pointer-events: none;
+    font-size: 15px;
+    transition: .3s ease transform;
+}
+
+/* EFECTO DNI */
+.login__container__form > #input_dni:focus ~ #span_dni {
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+#span_dni {
+    position: relative;
+    top: -48px;
+    pointer-events: none;
+    font-size: 15px;
+    transition: .3s ease transform;
+}
+
+/* EFECTO CONTRASEÑA */
+.login__container__form > #input_contraseña:focus ~ #span_contraseña {
+    transform: translateY(-20px) translateX(-26px) scale(.8);
+}
+
+#span_contraseña {
+    position: relative;
+    top: -24px;
+    pointer-events: none;
+    font-size: 15px;
+    transition: .3s ease transform;
+}
+
+#input_contraseña {
+    margin-bottom: 0;
+}
+
+.submit__btn {
+    margin-top: 2rem;
+    padding: 10px;
+    background: #2ECC71;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: .2s background-color;
+}
+
+.submit__btn:hover {
+    background-color: #28B463;
+    cursor: pointer;
+}
+
+#mensaje-error {
+    margin: 0;
+    color: red;
+    font-weight: bold;
+} 

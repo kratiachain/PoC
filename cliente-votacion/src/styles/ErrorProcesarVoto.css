@@ -1,0 +1,20 @@
+.modal-head_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F44336 !important;
+    font-size: 2rem;
+}
+
+.modal-content_error {
+    margin: auto;
+}
+
+#modal-buttons_error {
+    margin-bottom: 3rem;
+}
+
+#modal-buttons_error #btn-reintentar:hover {
+    color: #eee;
+    font-weight: lighter;
+}

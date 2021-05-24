@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.navbar {
+    font-family: "Roboto";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+a {
+    margin: auto;
+    padding: 2rem;
+    text-decoration: none;
+    color: #444;
+    font-size: 1.8rem;
+    transition: .66s color;
+}
+
+a:hover {
+    color: #000;
+    font-weight: bold;
+}

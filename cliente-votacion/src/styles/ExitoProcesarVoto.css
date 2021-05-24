@@ -1,0 +1,19 @@
+.modal-head_exito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ECC71;
+}
+
+.modal-content_exito {
+    margin: auto;
+}
+
+#modal-buttons_exito {
+    margin-bottom: 3rem;
+}
+
+#modal-buttons_exito #btn-aceptar:hover {
+    color: #eee;
+    font-weight: lighter;
+}

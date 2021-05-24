@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.card_candidato {
+    font-family: "Roboto", "Sans Serif";
+    background-color: #E5E8E8;
+    position: relative;
+    width: 30rem;
+    height: 40rem;
+    margin: 1.5rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transition: .5s all;
+}
+
+.card_candidato:hover {
+    transform: scale(1.05);
+}
+
+.imagen_candidato {
+    position: relative;
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.imagen_candidato > img {
+    width: 100%;
+    height: 62%;
+    object-fit: cover;
+}
+
+.info_candidato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 19rem;
+    color: #666;
+}
+
+.info_candidato h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.info_candidato h3 {
+    align-self: flex-start;
+    margin-top: 1.7rem;
+    margin-left: 2rem;
+}
+
+.btn_votar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 7rem;
+    padding: 1rem;
+}
+
+.btn {
+    background-color: #2ECC71;
+    color: #eee;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+    width: 15rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    opacity: 0.1;
+    transform: translateY(7rem);
+    transition: .5s all;
+}
+
+.btn:hover {
+    outline: none;
+    background-color: #07f068;
+    cursor: pointer;
+}
+
+.card_candidato:hover .btn_votar .btn {
+    opacity: 1;
+    transform: translateY(-1rem);
+}
