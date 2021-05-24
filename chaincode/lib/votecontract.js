@@ -17,7 +17,6 @@ class VoteContext extends Context {
     }
 }
 
-
 class VoteContract extends Contract {
 
     constructor() {
@@ -26,23 +25,23 @@ class VoteContract extends Contract {
     }
 
     createContext() {
-        return new CommercialPaperContext();
+        return new VoteContext();
+    }
+
+    async instantiate(ctx) {
+        // No implementation required with this example
+        // It could be where data migration is performed, if necessary
+        console.log('Instantiate the contract');
     }
 
     /**
      * Registrar el voto a un candidato
-     * @param {Context} ctx 
-     * @param {String} candidate 
-     * @param {String} voteToken 
      */
-    async Vote(ctx, candidate, voteToken) {
-        
+    async Vote(ctx, candidate, voteToken){
         //Crea una instancia del voto
         let vote = Vote.createInstance(candidate, voteToken);
-        
         //Registra el voto agregandolo a la lista de votos
         await ctx.votelist.addVote(vote);
-        
         //Devuelve el voto serializado (para probar)
         return vote;
     }
@@ -68,3 +67,5 @@ class VoteContract extends Contract {
         return JSON.stringify(allResults);
     }
 }
+
+module.exports = VoteContract;

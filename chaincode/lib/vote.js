@@ -19,32 +19,27 @@ class Vote extends State {
     }
 
     getVoteToken(){
-        return this.voteToken
+        return this.voteToken;
     }
 
     setVoteToken(newVoteToken){
-        this.voteToken = newVoteToken
+        this.voteToken = newVoteToken;
     }
 
     static fromBuffer(buffer) {
-        return CommercialPaper.deserialize(buffer);
+        return Vote.deserialize(buffer);
     }
 
     toBuffer() {
         return Buffer.from(JSON.stringify(this));
     }
 
-    /**
-     * @param {Buffer} data 
-     */
+
     static deserialize(data) {
         return State.deserializeClass(data, Vote);
     }
     /**
      * Factory method
-     * @param {String} candidate 
-     * @param {String} voteToken 
-     * @returns {Vote}
      */
     static createInstance(candidate, voteToken) {
         return new Vote({candidate, voteToken});

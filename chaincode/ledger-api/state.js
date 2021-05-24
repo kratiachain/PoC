@@ -33,8 +33,7 @@ class State {
     }
 
     // not used
-/*    serialize() {
-        
+    /*    serialize() {
         return State.serialize(this);
     } */
 
