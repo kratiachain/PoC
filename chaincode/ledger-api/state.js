@@ -90,7 +90,8 @@ class State {
     }
 
     static splitKey(key){
-        return key.split(':');
+        return key;
+        //return key.split(':');
     }
 
 }

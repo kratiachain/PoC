@@ -105,14 +105,20 @@ async function main() {
 			const contract = network.getContract(chaincodeName);
 
             //Transacciones
-            /* console.log('\n--> Submit Transaction: Votar Args: candidate, voteToken');
-			result = await contract.submitTransaction('vote', 'Thanos', 'thoken1');
-			console.log(`*** Result: ${prettyJSONString(result.toString())}`); */
+            console.log('\n--> Submit Transaction: Votar Args: candidate, voteToken');
+			let result = await contract.submitTransaction('Vote', 'Thanos', 'token1');
+			console.log(`*** Result: ${prettyJSONString(result.toString())}`);
+
+			result = await contract.submitTransaction('Vote', 'Thanos', 'token2');
+			console.log(`*** Result: ${prettyJSONString(result.toString())}`);
+
+			result = await contract.submitTransaction('GetVote', 'token2');
+			console.log(`Obtener voto por token: ${prettyJSONString(result.toString())}`);
 
 			// Let's try a query type operation (function).
 			// This will be sent to just one peer and the results will be shown.
 			console.log('\n--> Evaluate Transaction: GetAllAssets, function returns all the current assets on the ledger');
-			let result = await contract.evaluateTransaction('GetAllAssets');
+			result = await contract.evaluateTransaction('GetAllAssets');
 			console.log(`*** Result: ${prettyJSONString(result.toString())}`);
 
 		} finally {

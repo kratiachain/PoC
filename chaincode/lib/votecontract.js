@@ -39,10 +39,18 @@ class VoteContract extends Contract {
      */
     async Vote(ctx, candidate, voteToken){
         //Crea una instancia del voto
+        console.log(`*** Valores: ${candidate} ${voteToken}`);
         let vote = Vote.createInstance(candidate, voteToken);
+        console.log(`vote object: ${vote}`);
         //Registra el voto agregandolo a la lista de votos
         await ctx.votelist.addVote(vote);
         //Devuelve el voto serializado (para probar)
+        return vote;
+    }
+
+    async GetVote(ctx, voteToken){
+        let voteKey = Vote.makeKey([voteToken]);
+        let vote = await ctx.votelist.getVote(voteKey);
         return vote;
     }
 
@@ -51,6 +59,7 @@ class VoteContract extends Contract {
         const allResults = [];
         // range query with empty string for startKey and endKey does an open-ended query of all assets in the chaincode namespace.
         const iterator = await ctx.stub.getStateByRange('', '');
+        console.log(`iterator ${iterator}`);
         let result = await iterator.next();
         while (!result.done) {
             const strValue = Buffer.from(result.value.value.toString()).toString('utf8');
