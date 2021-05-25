@@ -14,11 +14,10 @@ describe('#Chaincode', () => {
         it('should work', async () => {
             const cc = new VoteContract();
             const stub = sinon.createStubInstance(Stub);
-            stub.getFunctionAndParameters.returns({ fcn: 'initFunc', params: [] });
             const ctx = cc.createContext();
             ctx.stub = stub;
             const res = await cc.Vote(ctx, 'b', 'c');
-            console.log(res);
+            console.log('Response: ' + res);
             //res.status.should.equal(Stub.RESPONSE_CODE.OK);
         });
     });
@@ -26,33 +25,31 @@ describe('#Chaincode', () => {
     describe('#GetAllResults', () => {
 
         it('should work', async () => {
+            //Ver como registrar elementos en las pruebas
             const cc = new VoteContract();
             const stub = sinon.createStubInstance(Stub);
-            stub.getFunctionAndParameters.returns({ fcn: 'initFunc', params: [] });
             const ctx = cc.createContext();
             ctx.stub = stub;
-            const res = await cc.Vote(ctx, 'b', 'c');
-            console.log(res);
-            const res2 = await cc.GetVote(ctx, 'c');
-            console.log(res2);
-            const res3 = await cc.GetAllAssets(ctx);
-            console.log(res3);
+            await cc.Vote(ctx, 'b', 'c');
+            //const res = await cc.GetAllAssets(ctx);
+            //console.log(res);
 
             //res.status.should.equal(Stub.RESPONSE_CODE.OK);
         });
     });
 
-    describe('#Record something', () => {
+    describe('#Exist', () => {
 
         it('should work', async () => {
-            //const cc = new VoteContract();
+            //Ver como registrar elementos en las pruebas
+            const cc = new VoteContract();
             const stub = sinon.createStubInstance(Stub);
-            stub.getFunctionAndParameters.returns({ fcn: 'initFunc', params: [] });
-            stub.putState('key', Buffer.from(JSON.stringify('asset')));
-            let data = await stub.getState('key');
-            console.log(`data: ${data}`);
-
-            //res.status.should.equal(Stub.RESPONSE_CODE.OK);
+            const ctx = cc.createContext();
+            ctx.stub = stub;
+            //await cc.Vote(ctx, 'b', 'c');
+            const res = await cc.Exists(ctx, 'c');
+            res.should.equal(false);
+            console.log('Response: ' + res);
         });
     });
 

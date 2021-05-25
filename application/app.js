@@ -109,11 +109,11 @@ async function main() {
 			let result = await contract.submitTransaction('Vote', 'Thanos', 'token1');
 			console.log(`*** Result: ${prettyJSONString(result.toString())}`);
 
-			result = await contract.submitTransaction('Vote', 'Thanos', 'token2');
+			result = await contract.submitTransaction('Vote', 'Spiderman', 'token2');
 			console.log(`*** Result: ${prettyJSONString(result.toString())}`);
 
-			result = await contract.submitTransaction('GetVote', 'token2');
-			console.log(`Obtener voto por token: ${prettyJSONString(result.toString())}`);
+			result = await contract.submitTransaction('Exists', 'token1');
+			console.log(`Verificar si el voto existe: ${prettyJSONString(result.toString())}`);
 
 			// Let's try a query type operation (function).
 			// This will be sent to just one peer and the results will be shown.

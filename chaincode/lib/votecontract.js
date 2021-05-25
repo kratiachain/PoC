@@ -38,20 +38,25 @@ class VoteContract extends Contract {
      * Registrar el voto a un candidato
      */
     async Vote(ctx, candidate, voteToken){
-        //Crea una instancia del voto
-        console.log(`*** Valores: ${candidate} ${voteToken}`);
-        let vote = Vote.createInstance(candidate, voteToken);
-        console.log(`vote object: ${vote}`);
-        //Registra el voto agregandolo a la lista de votos
-        await ctx.votelist.addVote(vote);
-        //Devuelve el voto serializado (para probar)
-        return vote;
-    }
-
-    async GetVote(ctx, voteToken){
+        //Busca el voto para verificar si el candidato ya voto
         let voteKey = Vote.makeKey([voteToken]);
         let vote = await ctx.votelist.getVote(voteKey);
-        return vote;
+        if (vote) {
+            throw new Error('\nVote for token: ' + voteToken + ' Already exist');
+        }
+        //Crea una instancia del voto
+        let newVote = Vote.createInstance(candidate, voteToken);
+        //Registra el voto agregandolo a la lista de votos
+        await ctx.votelist.addVote(newVote);
+        //Devuelve el voto serializado (para probar)
+        return newVote;
+    }
+
+    async Exists(ctx, voteToken){
+        //Verifica si existe un voto con cierto token
+        let voteKey = Vote.makeKey([voteToken]);
+        let vote = await ctx.votelist.getVote(voteKey);
+        return vote !== null;
     }
 
     // GetAllAssets returns all assets found in the world state.
@@ -59,7 +64,6 @@ class VoteContract extends Contract {
         const allResults = [];
         // range query with empty string for startKey and endKey does an open-ended query of all assets in the chaincode namespace.
         const iterator = await ctx.stub.getStateByRange('', '');
-        console.log(`iterator ${iterator}`);
         let result = await iterator.next();
         while (!result.done) {
             const strValue = Buffer.from(result.value.value.toString()).toString('utf8');
