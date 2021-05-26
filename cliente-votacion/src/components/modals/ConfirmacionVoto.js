@@ -11,7 +11,9 @@ export default function ConfirmacionVoto() {
 
     const dispatch = useDispatch();
     const solicitarConfirmarVoto = () => {
-        dispatch(confirmarVoto(candidato))
+        //Se pasa por parametro el candidato completo
+        //Para fines del PoC se pasa solo el nombre
+        dispatch(confirmarVoto(candidato.nombre))
     }
 
     const solicitarCancelarVoto = () => {
