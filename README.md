@@ -47,3 +47,6 @@ npm start
 ### Ver resultados
 ![alt text](/doc/images/resultados.png)
 
+
+## Copyright
+Para el desarrollo de este prototipo se utilizaron las funcionalidades de fabric y funcionalidades provistas en los ejemplos desarrollados por IBM bajo la licencia Apache-2.0
