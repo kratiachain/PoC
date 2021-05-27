@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExclamation } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../../styles/ErrorProcesarVoto.css'
 
 export default function ErrorProcesarVoto() {
@@ -8,7 +8,7 @@ export default function ErrorProcesarVoto() {
         <div className="modal-container">
             <div className="modal">
                 <div className="modal-head_error modal-head">
-                    <div className="success-icon"><FontAwesomeIcon icon={faExclamation} size="2x"/></div>
+                    <div className="error-icon"><FontAwesomeIcon id="exclamation" icon={faTimes} size="2x"/></div>
                 </div>
                 <div className="modal-content modal-content_error">
                     <h1>Se ha producido un error</h1>

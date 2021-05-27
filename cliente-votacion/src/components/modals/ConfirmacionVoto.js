@@ -13,7 +13,7 @@ export default function ConfirmacionVoto() {
     const solicitarConfirmarVoto = () => {
         //Se pasa por parametro el candidato completo
         //Para fines del PoC se pasa solo el nombre
-        dispatch(confirmarVoto(candidato.nombre))
+        dispatch(confirmarVoto(candidato))
     }
 
     const solicitarCancelarVoto = () => {

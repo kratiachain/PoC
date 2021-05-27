@@ -14,7 +14,7 @@ export default function ResultadoCandidato(props) {
                     <h2 className="nombre">{candidato.nombre} {candidato.apellido}</h2>
                 </div>
                 <div className="info_votos">
-                    <h1 className="porcentaje">47%</h1>
+                    <h1 className="porcentaje">{candidato.porcentaje}%</h1>
                     <h2 className="votos">{candidato.votos} votos</h2>
                 </div>    
             </div>

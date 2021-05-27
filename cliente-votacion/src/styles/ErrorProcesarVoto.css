@@ -2,8 +2,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F44336 !important;
     font-size: 2rem;
+}
+
+.error-icon {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+#exclamation {
+    color: #F44336;
 }
 
 .modal-content_error {

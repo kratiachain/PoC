@@ -2,7 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2ECC71;
+    background-color: #D7DBDD;
+}
+
+.success-icon {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+#check {
+    color: #2ECC71;
+    color: #0aaca1;
 }
 
 .modal-content_exito {

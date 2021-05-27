@@ -8,10 +8,10 @@ export default function ExitoProcesarVoto() {
         <div className="modal-container">
             <div className="modal">
                 <div className="modal-head modal-head_exito">
-                    <div className="success-icon"><FontAwesomeIcon icon={faCheck} size="3x"/></div>
+                    <div className="success-icon"><FontAwesomeIcon id="check" icon={faCheck} size="3x"/></div>
                 </div>
                 <div className="modal-content modal-content_exito">
-                    <h1>Su voto ha sido registrado con exito</h1>
+                    <h1>Su voto ha sido registrado con éxito</h1>
                     <h2>¡Felicitaciones!</h2>
                 </div>
                 <div id="modal-buttons_exito" className="modal-buttons">

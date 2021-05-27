@@ -63,6 +63,7 @@
 
 .btn {
     background-color: #2ECC71;
+    background-color: #00BFB2;
     color: #eee;
     text-align: center;
     font-size: 1.8rem;
@@ -79,6 +80,7 @@
 .btn:hover {
     outline: none;
     background-color: #07f068;
+    background-color: #0aaca1;
     cursor: pointer;
 }
 

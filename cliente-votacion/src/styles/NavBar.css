@@ -13,12 +13,12 @@ a {
     margin: auto;
     padding: 2rem;
     text-decoration: none;
-    color: #444;
+    color: #071013;
     font-size: 1.8rem;
     transition: .66s color;
 }
 
 a:hover {
-    color: #000;
+    color: #071013;
     font-weight: bold;
 }

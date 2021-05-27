@@ -25,7 +25,8 @@ body {
 
 header {
     grid-area: header;
-    background-color: #17A589;
+    /*background-color: #51d6ff;*/
+    background-color: #00BFB2;
     opacity: .8;
     transition: .5s all;
     z-index: 1;
@@ -37,7 +38,8 @@ header:hover {
 
 main {
     grid-area: main;
-    background-color: #D1F2EB;
+    background-color: #F2F3F4;
+    background-color: #EAEDED;
 }
 
 footer {
@@ -46,5 +48,6 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #82E0AA;
+    background-color: #CACFD2;
     color: #555;
 }

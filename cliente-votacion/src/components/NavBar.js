@@ -27,7 +27,7 @@ export default function NavBar() {
                 {
                     userInfo ? (
                         <div>
-                            <Link to="#">Hola {userInfo.nombre}!</Link>
+                            <Link to="#">Hola Diego!</Link>
                             <Link to="/Login" onClick={logoutHandler}>Cerrar Sesion</Link>
                         </div>
                     ) : 
@@ -39,3 +39,4 @@ export default function NavBar() {
         </div>
     )
 }
+//{userInfo.nombre}

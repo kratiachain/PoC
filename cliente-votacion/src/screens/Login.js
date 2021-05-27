@@ -37,7 +37,7 @@ export default function Login(props) {
                         value={nombre} 
                         onChange={(e) => setNombre(e.target.value)}
                     />
-                    <span id="span_nombre">Nombre</span>
+                    <span id="span_nombre">Usuario</span>
                     <input 
                         id="input_dni"
                         type="number"

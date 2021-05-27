@@ -38,7 +38,8 @@ const data = {
             lista: "Lista 1",
             cargo: "Presidente",
             img: "/imagenes/img1.jpeg",
-            votos: "47"
+            votos: "187",
+            porcentaje: "32,24"
         },
         {
             id: "2",
@@ -49,7 +50,8 @@ const data = {
             lista: "Lista 2",
             cargo: "Presidente",
             img: "/imagenes/img2.jpg",
-            votos: "25"
+            votos: "125",
+            porcentaje: "21,55"
         },
         {
             id: "3",
@@ -60,7 +62,8 @@ const data = {
             lista: "Lista 3",
             cargo: "Presidente",
             img: "/imagenes/img3.jpg",
-            votos: "68"
+            votos: "268",
+            porcentaje: "46,21"
         },
     ],
 };

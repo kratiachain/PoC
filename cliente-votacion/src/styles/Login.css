@@ -56,11 +56,12 @@
 
 .login__container__form > input:focus {
     outline: none;
-    border-bottom: 1px solid #2ECC71;
+    border-bottom: 1px solid #00BFB2;
 }
 
 .login__container__form > #input_nombre:valid ~ #span_nombre{
     transform: translateY(-20px) translateX(-26px) scale(.8);
+    
 }
 
 .login__container__form > #input_dni:valid ~ #span_dni{
@@ -74,6 +75,8 @@
 /* EFECTO NOMBRE */
 .login__container__form > #input_nombre:focus ~ #span_nombre {
     transform: translateY(-20px) translateX(-26px) scale(.8);
+    color: #00BFB2;
+    font-weight: bold;
 }
 
 #span_nombre {
@@ -87,6 +90,8 @@
 /* EFECTO DNI */
 .login__container__form > #input_dni:focus ~ #span_dni {
     transform: translateY(-20px) translateX(-26px) scale(.8);
+    color: #00BFB2;
+    font-weight: bold;
 }
 
 #span_dni {
@@ -100,6 +105,8 @@
 /* EFECTO CONTRASEÑA */
 .login__container__form > #input_contraseña:focus ~ #span_contraseña {
     transform: translateY(-20px) translateX(-26px) scale(.8);
+    color: #00BFB2;
+    font-weight: bold;
 }
 
 #span_contraseña {
@@ -118,6 +125,7 @@
     margin-top: 2rem;
     padding: 10px;
     background: #2ECC71;
+    background: #00BFB2;
     border: none;
     color: white;
     font-size: 15px;
@@ -129,6 +137,7 @@
 
 .submit__btn:hover {
     background-color: #28B463;
+    background-color: #0aaca1;
     cursor: pointer;
 }
 
