@@ -1,6 +1,18 @@
 # PoC
 KratiaChain proof of concept
 
+## KratiaChain
+Con el desarrollo de KratiaChain buscamos crear un sistema de votacion seguro, transparente y descentralizado que proporcione a sus usuarios un alto grado de confiaza para llevar a cabo una votación de forma digital.
+
+### Registrarse / Iniciar sesión
+![alt text](/doc/images/singin.png)
+
+### Votar
+![alt text](/doc/images/votacion.png)
+
+### Ver resultados
+![alt text](/doc/images/resultados.png)
+
 ## Instalación
 - [Instalar fabric](https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html)
 
@@ -8,9 +20,9 @@ KratiaChain proof of concept
 ```
 git clone https://github.com/kratiachain/PoC.git
 ```
-- Instalar depndencias dentro de application, chaincode y cliente-aplication
+- Instalar depndencias dentro de application, chaincode y cliente-aplicacion
 ```
-npm start
+npm install
 ```
 
 ## Crear la red, registrar el canal y desplegar el contrato
@@ -37,16 +49,6 @@ Para ejecutar la aplicación de votos:
 cd cliente-votacion/
 npm start
 ```
-
-### Registrarse / Iniciar sesión
-![alt text](/doc/images/singin.png)
-
-### Votar
-![alt text](/doc/images/votacion.png)
-
-### Ver resultados
-![alt text](/doc/images/resultados.png)
-
 
 ## Copyright
 Para el desarrollo de este prototipo se utilizaron las funcionalidades de fabric y funcionalidades provistas en los ejemplos desarrollados por IBM bajo la licencia Apache-2.0
